@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таймер для яєць</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script src="renderer.js"></script>
+<body>
+    <div class="container">
+        <div class="title-bar">
+            <button class="title-button close-btn" data-ipc-event="window-close">✖</button>
+            <button class="title-button minimize-btn" data-ipc-event="window-minimize">➖</button>
+        </div>
+        <h1>Оберіть, як приготувати яйце</h1>
+        <div class="buttons">
+            <button class="egg-button" onclick="startTimer('smytku', 5)">
+                <img src="assets/smytku.png" alt="Всмятку">
+                <span>Всмятку</span>
+            </button>
+            <button class="egg-button" onclick="startTimer('krutu', 600)">
+                <img src="assets/krutu.png" alt="Крутое">
+                <span>Вкруту</span>
+            </button>
+            <button class="egg-button" onclick="startTimer('glazunya', 300)">
+                <img src="assets/glazunya.png" alt="Жареное">
+                <span>глазунья</span>
+            </button>
+            <button class="egg-button" onclick="startTimer('omelet', 420)">
+                <img src="assets/omelet.png" alt="Омлет">
+                <span>Омлет</span>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function startTimer(type, time) {
+            localStorage.setItem("eggType", type);
+            localStorage.setItem("eggTime", time);
+            window.location.href = "timer.html";
+        }
+    </script>
+</body>
+</html>

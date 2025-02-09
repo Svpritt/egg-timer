@@ -1,0 +1,26 @@
+{
+  "name": "egg-timer",
+  "version": "1.0.0",
+  "description": "Простое приложение-таймер для приготовления яиц",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^34.1.1",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.yourapp.eggtimer",
+    "productName": "Egg Timer",
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  }
+}

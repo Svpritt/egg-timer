@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egg timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title-bar">
+            <button class="title-button close-btn" data-ipc-event="window-close">✖</button>
+            <button class="title-button minimize-btn" data-ipc-event="window-minimize">➖</button>
+        </div>
+        <h1>Таймер йде</h1>
+        <div class="timer-box">
+            <h2 id="timer-text">00:00</h2>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

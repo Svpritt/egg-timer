@@ -1,0 +1,148 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Центрирование контейнера */
+.container {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+/* Заголовок */
+h1 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Кнопки */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+/* Стили для кнопок */
+.egg-button {
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.egg-button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Картинки внутри кнопок */
+.egg-button img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* Текст под картинками */
+.egg-button span {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+/* Блок таймера (делаем в стиле кнопок) */
+.timer-box {
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Стиль кнопки "Готово" */
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background-color: #45a049;
+}
+/* Стили для изображения готового блюда */
+.result-image {
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.title-bar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #ccc;
+    padding: 5px;
+    border-bottom: 2px solid #999;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.title-button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.title-button:hover {
+    color: red;
+}
+.title-bar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #ccc;
+    padding: 5px;
+    border-bottom: 2px solid #999;
+    width: inherit;
+    -webkit-app-region: drag; /* Делаем перетаскиваемым */
+}
+
+.title-button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    margin-left: 5px;
+    cursor: pointer;
+    -webkit-app-region: no-drag; /* Кнопки НЕ должны перетаскиваться */
+}
